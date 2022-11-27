@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.sebas.certification.flash.runners.PlanRenovation" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="SEBAS" time="0.0">
+  <properties/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/zapat/Desktop/Practicas%20Automatizacion/FlashMobile_Automation/FlashAutomation/src/test/resources/features/plan_renovation.feature
+[Test worker] INFO  - 
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+-------------------------------------------------------------------------------------
+
+[Test worker] INFO  - Test Suite Started: I as a user I need to see the correct renovation of my plan
+[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/zapat/Desktop/Practicas%20Automatizacion/FlashMobile_Automation/FlashAutomation/src/test/resources/features/plan_renovation.feature
+[Test worker] INFO  - Test Suite Started: I as a user I need to see the correct renovation of my plan
+log4j:WARN No appenders could be found for logger (freemarker.cache).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+?[32m?[1m?????????????????????????????????????????????????????????????????????????????[0m
+?[32m?[1m??[0m View your Cucumber Report at:                                            ?[32m?[1m??[0m
+?[32m?[1m??[0m ?[1m?[36m?[4mhttps://reports.cucumber.io/reports/705f00a9-d00f-4337-8007-cacc6783828a?[0m ?[32m?[1m??[0m
+?[32m?[1m??[0m                                                                          ?[32m?[1m??[0m
+?[32m?[1m??[0m ?[1mThis report will self-destruct in 24h.?[0m                                   ?[32m?[1m??[0m
+?[32m?[1m??[0m Keep reports forever: ?[4m?[1m?[36mhttps://reports.cucumber.io/profile?[0m                ?[32m?[1m??[0m
+?[32m?[1m?????????????????????????????????????????????????????????????????????????????[0m]]></system-err>
+</testsuite>
