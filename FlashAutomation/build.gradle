@@ -29,6 +29,8 @@ dependencies {
     implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '3.4.2'
     // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-reports
     implementation group: 'net.serenity-bdd', name: 'serenity-reports', version: '3.4.2'
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-screenplay-webdriver
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:3.4.3'
 
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
