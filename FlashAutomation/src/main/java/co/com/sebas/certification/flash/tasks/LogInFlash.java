@@ -1,9 +1,17 @@
 package co.com.sebas.certification.flash.tasks;
 
 import co.com.sebas.certification.flash.integrations.SetDataToLogIn;
+import co.com.sebas.certification.flash.utils.Encrypter;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.NoSuchPaddingException;
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 
 public class LogInFlash implements Task {
 
@@ -17,16 +25,10 @@ public class LogInFlash implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        System.out.println("Clase: LogInFlash\nuser: "+ user+"\nPassword: "+password);
-        actor.attemptsTo(SetDataToLogIn.setData(user,password));
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        actor.attemptsTo(SetDataToLogIn.setData(user, password));
     }
 
-    public static LogInFlash logIn(String user, String password){
+    public static LogInFlash logIn(String user, String password) {
         return Tasks.instrumented(LogInFlash.class, user, password);
     }
 

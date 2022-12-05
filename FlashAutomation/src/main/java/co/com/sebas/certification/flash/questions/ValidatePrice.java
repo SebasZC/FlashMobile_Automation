@@ -10,4 +10,8 @@ public class ValidatePrice implements Question {
     public Object answeredBy(Actor actor) {
         return PRICE_PLANE.resolveFor(actor).getText();
     }
+
+    public static ValidatePrice validatePrice(){
+        return new ValidatePrice();
+    }
 }

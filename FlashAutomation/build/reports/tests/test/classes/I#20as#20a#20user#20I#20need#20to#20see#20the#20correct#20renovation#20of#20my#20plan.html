@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">43.715s</div>
+<div class="counter">46.095s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,89 +61,16 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
+<a href="#tab1">Standard output</a>
 </li>
 <li>
-<a href="#tab2">Standard output</a>
-</li>
-<li>
-<a href="#tab3">Standard error</a>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="Log in the flash mobile web"></a>
-<h3 class="failures">Log in the flash mobile web</h3>
-<span class="code">
-<pre>io.cucumber.core.exception.CucumberException: Step [^the user will see your current plan (.*)$] is defined with 0 parameters at 'co.com.sebas.certification.flash.stepdefinitions.PlanRenovationStepDefinitions.theUserWillSeeYourCurrentPlanPowerFlash()'.
-However, the gherkin step has 1 arguments:
- * Power Flash
-Step text: the user will see your current plan Power Flash
-	at app//io.cucumber.core.runner.PickleStepDefinitionMatch.arityMismatch(PickleStepDefinitionMatch.java:83)
-	at app//io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:42)
-	at app//io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at app//io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)
-	at app//io.cucumber.core.runner.TestStep.run(TestStep.java:57)
-	at app//io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at app//io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at app//io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)
-	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)
-	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at app//io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at app//io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)
-	at app//io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//io.cucumber.junit.CucumberSerenityRunner$RunCucumber.evaluate(CucumberSerenityRunner.java:288)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base@11.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@11.0.17/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -154,25 +81,25 @@ Step text: the user will see your current plan Power Flash
 </tr>
 </thead>
 <tr>
-<td class="failures">Log in the flash mobile web</td>
-<td class="failures">43.715s</td>
-<td class="failures">failed</td>
+<td class="success">Log in the flash mobile web</td>
+<td class="success">46.095s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Clase: LogInFlash
-user: Sebas001
-Password: cc1007689094
-Clase: SetDataToLogIn
-user: Sebas001
-Password: cc1007689094
+<pre>Clase: SetDataToLogIn
+user: Ip+QIsDswwfYAml3cNQwiQ==
+Password: Pvwx6o3Z+3wlV5l11d+Y0w==
+EntrÃ³ al THEN
+EntrÃ³ a ValidatePlan
+Plan-name: Power Flash
 </pre>
 </span>
 </div>
-<div id="tab3" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/zapat/Desktop/Practicas%20Automatizacion/FlashMobile_Automation/FlashAutomation/src/test/resources/features/plan_renovation.feature
@@ -186,22 +113,20 @@ Log in the flash mobile web(i-as-a-user-i-need-to-see-the-correct-renovation-of-
 --------------------------------------------------------------------------------
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --incognito], extensions: []}}
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 21565
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 48217
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-dic. 04, 2022 10:23:30 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+dic. 04, 2022 11:46:49 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 ADVERTENCIA: Unable to find an exact match for CDP version 108, so returning the closest version found: 107
-[Test worker] ERROR  - 
-  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
- |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
-   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
-   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
 Log in the flash mobile web
----------------------------------------------------------------
-[Test worker] ERROR  -     Test failed at step: Then the user will see your current plan Power Flash
-[Test worker] ERROR  -     Step [^the user will see your current plan (.*)$] is defined with 0 parameters at 'co.com.sebas.certification.flash.stepdefinitions.PlanRenovationStepDefinitions.theUserWillSeeYourCurrentPlanPowerFlash()'.
+----------------------------------------------------------------------
 </pre>
 </span>
 </div>
@@ -213,7 +138,7 @@ Log in the flash mobile web
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 4 dic. 2022 22:24:14</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 4 dic. 2022 23:47:35</p>
 </div>
 </div>
 </body>

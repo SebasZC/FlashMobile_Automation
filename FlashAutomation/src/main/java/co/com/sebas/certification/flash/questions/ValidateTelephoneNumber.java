@@ -8,6 +8,10 @@ import static co.com.sebas.certification.flash.userinterfaces.UserPage.FIELD_NUM
 public class ValidateTelephoneNumber implements Question{
     @Override
     public Object answeredBy(Actor actor) {
-        return FIELD_NUMBER.resolveFor(actor).getText();
+        return FIELD_NUMBER.resolveFor(actor).getText().replace(" ","");
+    }
+
+    public static ValidateTelephoneNumber validateTelephoneNumber(){
+        return new ValidateTelephoneNumber();
     }
 }

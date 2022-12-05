@@ -2,8 +2,10 @@ package co.com.sebas.certification.flash.stepdefinitions;
 
 
 import co.com.sebas.certification.flash.questions.ValidatePlan;
+import co.com.sebas.certification.flash.questions.ValidateTelephoneNumber;
 import co.com.sebas.certification.flash.tasks.LogInFlash;
 import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -42,9 +44,13 @@ public class PlanRenovationStepDefinitions {
         OnStage.theActorInTheSpotlight().attemptsTo(LogInFlash.logIn(user, password));
     }
     @Then("^the user will see your current plan (.*)$")
-    public void theUserWillSeeYourCurrentPlanPowerFlash() {
+    public void theUserWillSeeYourCurrentPlanPowerFlash(String plane) {
         System.out.println("Entró al THEN");
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidatePlan.validatePlan(), Matchers.equalTo("Power Flas")));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidatePlan.validatePlan(), Matchers.equalTo(plane)));
     }
 
+    @And("^the user will see your correct telephone number (.*)$")
+    public void theUserWillSeeYourCorrectTelephoneNumber(String telephoneNumber) {
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateTelephoneNumber.validateTelephoneNumber(), Matchers.equalTo(telephoneNumber)));
+    }
 }
