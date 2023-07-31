@@ -10,6 +10,6 @@ import org.junit.runner.RunWith;
         glue = "co.com.sebas.certification.flash.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         publish = true,
-        tags = "@Test3")
+        tags = "@Test2")
 public class PlanRenovation {
 }

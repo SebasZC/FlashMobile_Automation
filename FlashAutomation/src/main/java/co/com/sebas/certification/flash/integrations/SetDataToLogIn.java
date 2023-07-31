@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
 
 import javax.crypto.BadPaddingException;
@@ -17,12 +18,14 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 
 import static co.com.sebas.certification.flash.userinterfaces.HomePage.*;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class SetDataToLogIn implements Task {
 
     private String user;
     private String password;
-    final String passwordEncryption = "secret!";
+    final String passwordEncryption = "FL-2020@*confidenTi4l*"; //poner como variable de entorno
 
     public SetDataToLogIn(String user, String password) {
         this.user = user;
@@ -34,24 +37,15 @@ public class SetDataToLogIn implements Task {
         System.out.println("Clase: SetDataToLogIn\nuser: "+ user+"\nPassword: "+password);
         try {
             actor.attemptsTo(
+                    WaitUntil.the(LOG_IN_BUTTON, isClickable()).forNoMoreThan(30).seconds(),
                     Click.on(LOG_IN_BUTTON),
                     Click.on(MY_ACCOUNT_BUTTON),
-                    Enter.theValue(Encrypter.decrypt(user,passwordEncryption)).into(USER_FIELD),
-                    Enter.theValue(Encrypter.decrypt(password,passwordEncryption)).into(PASSWORD_FIELD),
+                    Enter.theValue(user).into(USER_FIELD),
+                    Enter.theValue(password).into(PASSWORD_FIELD),
                     Click.on(SUBMIT_BUTTON)
 
             );
-        } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidKeyException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchPaddingException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalBlockSizeException e) {
-            throw new RuntimeException(e);
-        } catch (BadPaddingException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

@@ -2,13 +2,13 @@ package co.com.sebas.certification.flash.stepdefinitions;
 
 
 import co.com.sebas.certification.flash.integrations.SendWhatsappMessage;
-import co.com.sebas.certification.flash.models.DataToSendWhatsApp;
 import co.com.sebas.certification.flash.questions.ValidatePlan;
 import co.com.sebas.certification.flash.questions.ValidateTelephoneNumber;
 import co.com.sebas.certification.flash.tasks.LogInFlash;
+import co.com.sebas.certification.flash.utils.Checkeo;
 import co.com.sebas.certification.flash.tasks.LoginBemovil;
 import co.com.sebas.certification.flash.tasks.RechargeToPhone;
-import co.com.sebas.certification.flash.utils.SendWhatsApp;
+import co.com.sebas.certification.flash.utils.CSVReader;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -16,8 +16,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.GivenWhenThen;
+import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Browser;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.Cast;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -25,10 +25,7 @@ import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
 
-import java.util.List;
-
 import static co.com.sebas.certification.flash.utils.Constants.FLASH_MOBILE_URL;
-import static co.com.sebas.certification.flash.utils.Constants.WHATSAPP_MOBILE_URL;
 
 public class PlanRenovationStepDefinitions {
 
@@ -48,9 +45,9 @@ public class PlanRenovationStepDefinitions {
         OnStage.theActorInTheSpotlight().wasAbleTo(Open.url(FLASH_MOBILE_URL));
     }
 
-    @When("^the user log in in your account with (.*) and (.*)$")
-    public void theUserLogInInYourAccountWithSebas001AndCc1007689094(String user, String password) {
-        OnStage.theActorInTheSpotlight().attemptsTo(LogInFlash.logIn(user, password));
+    @When("^the user log in in your account with its credentials$")
+    public void theUserLogInInYourAccountWithItsCredentials() {
+        OnStage.theActorInTheSpotlight().attemptsTo(LogInFlash.logIn(1));
     }
     @Then("^the user will see your current plan (.*)$")
     public void theUserWillSeeYourCurrentPlanPowerFlash(String plane) {
@@ -71,6 +68,7 @@ public class PlanRenovationStepDefinitions {
     @And("the user is in the main page to whatsapp")
     public void theUserIsInTheMainPageToWhatsapp() {
         OnStage.theActorInTheSpotlight().wasAbleTo(Open.url("https://web.whatsapp.com/send/?phone=573505082088&text=Hola *Sebas* bien?"));
+        OnStage.theActorInTheSpotlight().attemptsTo(SendWhatsappMessage.sendWhatsappMessage(""));
     }
 
     @Given("the user in on bemovil page")
@@ -95,5 +93,10 @@ public class PlanRenovationStepDefinitions {
     @And("validation amount available")
     public void validationAmountAvailable() {
 
+    }
+
+    @Given("the user reads data")
+    public void theUserReadsData() {
+        CSVReader.readData(2);
     }
 }
